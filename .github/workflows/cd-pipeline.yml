@@ -36,7 +36,12 @@ jobs:
         uses: google-github-actions/auth@v3
         with:
           credentials_json: ${{ secrets.GCP_SERVICE_ACCOUNT }}
-
+      - name: Debug gcloud auth
+        run: |
+          gcloud --version
+          gcloud auth list --filter=status:ACTIVE --format="value(account)"
+          gcloud config list --format yaml || true
+          echo "SERVICE ACCOUNT SECRET LENGTH: $(echo -n "${{ secrets.GCP_SERVICE_ACCOUNT }}" | wc -c)"
       - name: Set up Cloud SDK
         uses: google-github-actions/setup-gcloud@v3
 
