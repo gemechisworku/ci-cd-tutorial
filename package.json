@@ -6,12 +6,12 @@
     "test": "jest",
     "start": "node ./index.js"
   },
-  "author": "Prince Onukwili",
+  "author": "Gemechis W.",
   "license": "ISC",
   "description": "",
   "repository": {
     "type": "git",
-    "url": "https://github.com/onukwilip/ci-cd-tutorial.git"
+    "url": "https://github.com/gemechisworku/ci-cd-tutorial.git"
   },
   "dependencies": {
     "cors": "^2.8.5",
